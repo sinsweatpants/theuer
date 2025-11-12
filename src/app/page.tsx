@@ -3,8 +3,8 @@
 import { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
-import { VideoTextMask } from "@/components/video-text-mask";
-import { LandingCardScanner } from "@/components/card-scanner/landing-card-scanner";
+import { VideoTextMask } from "./components/video-text-mask";
+import { LandingCardScanner } from "./components/card-scanner/landing-card-scanner";
 
 // Register GSAP plugin
 if (typeof window !== "undefined") {
@@ -104,7 +104,7 @@ export default function Home() {
       >
         <VideoTextMask
           ref={maskContentRef}
-          videoSrc="https://cdn.pixabay.com/video/2025/11/09/314880_large.mp4"
+          videoSrc="https://cdn.pixabay.com/video/2025/11/09/314880.mp4"
           text="النسخة"
           className="w-full h-full"
         />

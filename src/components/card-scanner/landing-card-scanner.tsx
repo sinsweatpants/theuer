@@ -100,9 +100,7 @@ export function LandingCardScanner() {
       }
 
       startDrag(e: MouseEvent | Touch) {
-        if ('preventDefault' in e) {
-          e.preventDefault()
-        }
+        e.preventDefault()
         this.isDragging = true
         this.isAnimating = false
         this.lastMouseX = e.clientX
@@ -122,9 +120,7 @@ export function LandingCardScanner() {
 
       onDrag(e: MouseEvent | Touch) {
         if (!this.isDragging) return
-        if ('preventDefault' in e) {
-          e.preventDefault()
-        }
+        e.preventDefault()
 
         const deltaX = e.clientX - this.lastMouseX
         this.position += deltaX
@@ -246,7 +242,7 @@ export function LandingCardScanner() {
         return { width, height, fontSize, lineHeight }
       }
 
-      createCardWrapper(card: (typeof CARDS_11)[number], imageIndex: number): HTMLDivElement {
+      createCardWrapper(card: typeof CARDS_11[0], imageIndex: number): HTMLDivElement {
         const wrapper = document.createElement("div")
         wrapper.className = "card-wrapper"
         wrapper.setAttribute("data-link", card.href)
